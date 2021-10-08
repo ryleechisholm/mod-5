@@ -1,9 +1,9 @@
-from django.contrib import admin
 from django.urls import path
 import app.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("hey/", app.views.hey, name="hey"),
     path("", app.views.root, name="root"),
-    path("hey/", app.views.hey, name="hey")
+    path("age-in/", app.views.age_in, name="age-in"),
+    path("order-total/", app.views.order, name="order-total")
 ]
