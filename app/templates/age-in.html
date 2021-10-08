@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="{% url 'age-in' %}" method="GET">
+        {{ form.as_p }}
+        <button>Calculate Age</button>
+    <form>
+    {% if age >= 0 %}
+    <p>You will be {{ age }} in {{ year }}!</p>
+    {% endif %}
+  </body>
+</html>
