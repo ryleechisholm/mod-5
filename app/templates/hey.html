@@ -7,10 +7,10 @@
   </head>
   <body>
     <form action="{% url 'hey' %}" method="GET">
-        {% csrf_token %} {{ form.as_p }}
+        {{ form.as_p }}
         <button>Greet!</button>
     <form>
-    {% if greeting_success %}
+    {% if name is not None %}
     <p>Hello, {{ name }}!</p>
     {% endif %}
   </body>
